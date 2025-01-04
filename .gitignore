@@ -8,9 +8,13 @@
 # wxt 配置
 .wxt
 
+
 # 依赖
 node_modules
 
 # 环境变量和密码
 .env.submit
 /components/tts.js
+
+output
+package-lock.json
