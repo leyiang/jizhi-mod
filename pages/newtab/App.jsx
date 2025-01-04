@@ -97,7 +97,7 @@ export default function App() {
           <div className="justify-center item-center flex flex-col">
             <p
               id="poem-title-container"
-              className="text-5xl mb-10 whitespace-pre-wrap cursor-pointer transition-all duration-300 hover:scale-105"
+              className="text-5xl mb-10 whitespace-pre-wrap cursor-pointer transition-all duration-300"
             >
               {poem.title}
             </p>
@@ -126,7 +126,7 @@ export default function App() {
         >
           <div
             id="theme-toggle"
-            className="custom-settings-button-style transition-all duration-300 hover:scale-110"
+            className="custom-settings-button-style transition-all duration-300"
             onClick={toggleTheme}
           >
             {theme === "light" && <SunIcon className="swap-on fill-current w-8 h-8" />}
@@ -137,7 +137,7 @@ export default function App() {
 
         <div className="ml-4"></div>
         <div className="tooltip" data-tip="切换字体">
-          <div id="font-toggle" className="custom-settings-button-style transition-all duration-300 hover:scale-110">
+          <div id="font-toggle" className="custom-settings-button-style transition-all duration-300">
             <label className="swap">
               <input type="checkbox" onClick={toggleFont} />
               <FontIcon className="swap-on fill-current w-8 h-8" />
