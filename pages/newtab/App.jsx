@@ -56,6 +56,8 @@ export default function App() {
         newTitle = result.join("\n");
       }
     }
+
+	newTitle = newTitle.replaceAll(" ", "\n");
     setPoem((prevPoem) => ({ ...prevPoem, title: newTitle }));
     setIsAnimating(true);
     const timer = setTimeout(() => setIsAnimating(false), 1000);
@@ -98,6 +100,10 @@ export default function App() {
             <p
               id="poem-title-container"
               className="text-5xl mb-10 whitespace-pre-wrap cursor-pointer transition-all duration-300"
+			  style={{
+				maxWidth: "90vw",
+				lineHeight: 1.25
+			  }}
             >
               {poem.title}
             </p>
