@@ -72,24 +72,6 @@ export default function App() {
     setFontIndex((prevIndex) => (prevIndex + 1) % FONTNAME_LIST.length);
   }, []);
 
-  useEffect(() => {
-	const keydown = e => {
-		if( e.key === 'r' ) {
-			window.location.reload();
-		}
-
-		if( e.key === "x" ) {
-			window.close();
-		}
-	}
-
-	document.addEventListener("keydown", keydown);
-
-	return () => {
-		document.removeEventListener("keydown", keydown);
-	};
-  }, []);
-
   return (
     <div id="app" className="custom-font" style={{ "--custom-font-name": FONTNAME_LIST[fontIndex] }}>
       <div className="min-h-screen flex items-center justify-center">
